@@ -4,5 +4,8 @@ services:
     container_name: entries-database
     ports:
       - 27017:27017
+      # Se asigna el puerto 27017 de mi PC al el puerto 27017 de este contenedor/imagen
     volumes:
       - ./mongo:/data/db
+      # Se asigna el directorio donde se guardará la data de la db.
+      # Por defecto se guardaría en el mismo contenedor docker pero no es recomendable.

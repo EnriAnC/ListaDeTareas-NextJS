@@ -17,6 +17,7 @@ interface Props{
     children: React.ReactElement;
 }
 
+// Proveer el contexto a la aplicación.
 export const EntriesProvider:React.FC<Props> = ({ children }) => {
 
     const [state, dispatch] = useReducer(entriesReducer, Entries_INITIAL_STATE);

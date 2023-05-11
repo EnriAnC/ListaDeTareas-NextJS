@@ -17,7 +17,7 @@ export const Navbar:React.FC = () => {
                     <MenuIcon />
                 </IconButton>
                 <Link href="/" style={{textDecoration:'none'}}>
-                    <Typography variant='h6' sx={{color:'white'}}>OpenJira</Typography>
+                    <Typography variant='h6' sx={{color:'white'}}>What to do?</Typography>
                 </Link>
             </Toolbar>
 
