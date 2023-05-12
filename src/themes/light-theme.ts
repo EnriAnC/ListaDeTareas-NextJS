@@ -9,10 +9,10 @@ export const lightTheme = createTheme({
         default: grey[300]
       },
       primary:{
-        main:'#4a148c'
+        main:'#2E3236'
       },
       secondary:{
-        main:'#19857b'
+        main:'#D0E7F5'
       },
       error:{
         main: red.A400
@@ -24,7 +24,11 @@ export const lightTheme = createTheme({
           defaultProps:{
               elevation: 0
           },
-          styleOverrides:{}
+          styleOverrides:{
+            root:{
+                backgroundColor:'#2E3236'
+            }
+        }
         }
     }
 })    

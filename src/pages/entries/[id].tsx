@@ -24,7 +24,7 @@ interface Props{
 
 const EntryPage:React.FC<Props> = ( { entry } ) => {
 
-    const { updateEntry } = useContext( EntriesContext )
+    const { updateEntry, deleteEntry } = useContext( EntriesContext )
 
     const [ inputValue, setInputValue ] = useState(entry.description);
     const [ status, setStatus ] = useState<EntryStatus>(entry.status);
@@ -38,6 +38,11 @@ const EntryPage:React.FC<Props> = ( { entry } ) => {
 
     const onStatusChanged = ( event:ChangeEvent<HTMLInputElement> ) => {
         setStatus( event.target.value as EntryStatus );
+    }
+
+    const onDelete = () => {
+        deleteEntry(entry._id, true)
+        setTimeout(()=>{location.href = '/'}, 1500) 
     }
 
     const onSave = () => {
@@ -113,11 +118,13 @@ const EntryPage:React.FC<Props> = ( { entry } ) => {
             </Grid>
 
             <IconButton sx={{
-                position:'fixed',
-                bottom: 30,
-                right: 30,
-                backgroundColor: 'error.dark'
-            }}>
+                    position:'fixed',
+                    bottom: 30,
+                    right: 30,
+                    backgroundColor: 'error.dark'
+                }}
+                onClick = { onDelete }
+            >
                 <DeleteIcon />
             </IconButton>
 

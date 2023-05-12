@@ -11,7 +11,7 @@ export const Navbar:React.FC = () => {
 
     return ( 
         <AppBar position='sticky' elevation={ 0 }>
-            <Toolbar>'
+            <Toolbar>
                 <IconButton size='large' edge='start'
                 onClick={ openSideMenu }>
                     <MenuIcon />

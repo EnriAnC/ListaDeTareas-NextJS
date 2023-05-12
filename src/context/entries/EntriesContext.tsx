@@ -8,6 +8,7 @@ interface ContextProps {
     // Methods
     addNewEntry: (description:string) => void;
     updateEntry: (entry:Entry, showSnackBar?: boolean) => void;
+    deleteEntry: (id: string, showSnackBar?: boolean) => void;
 }
 
 // 1. Creación del contexto
