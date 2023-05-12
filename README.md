@@ -1,4 +1,4 @@
-# Next.js OpenJira App
+# Next.js WhatToDo? App
 
 Para correr localmente, se necesita de la base de datos
 ```

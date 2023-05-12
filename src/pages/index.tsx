@@ -6,7 +6,7 @@ import { EntryList, NewEntry } from '@/components/ui/'
 const HomePage:NextPage = () => {
 
   return (
-      <Layout title='Home - OpenJira'>
+      <Layout title='Home - WhatToDo'>
         
         <Grid container
         spacing={ 2 }>

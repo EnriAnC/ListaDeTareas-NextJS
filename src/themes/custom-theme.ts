@@ -6,11 +6,11 @@ export const customTheme = createTheme({
     palette:{
         mode:'dark',
         background:{
-          default:'#257CC2',
-          paper:'#0B4575'
+          default:'#13253B',
+          paper:'#003067'
         },
         secondary:{
-          main:'#5485C1',
+          main:'#458EE8',
         },
         error:{
           main: red.A400
@@ -24,7 +24,7 @@ export const customTheme = createTheme({
             },
             styleOverrides:{
                 root:{
-                    backgroundColor:'#0B4575'
+                    backgroundColor:'#003067    '
                 }
             }
           }

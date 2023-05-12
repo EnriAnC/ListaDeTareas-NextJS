@@ -16,7 +16,7 @@ export const EntryList: React.FC<Props> = ( { status }) => {
 
     const entriesByStatus = useMemo(()=>entries.filter( entry => entry.status === status), [entries])
 
-    const allowDrop = (event:React.DragEvent) => {
+    const allowDrop = (event:React.DragEvent) => { 
         event.preventDefault()
     }
 
@@ -31,10 +31,14 @@ export const EntryList: React.FC<Props> = ( { status }) => {
 
     return ( 
         <div onDrop={ onDropEntry }
-            onDragOver={ allowDrop }
+            onDragOver={ allowDrop } //Permite habilitar el bloque para el drop
             className={isDragging ? styles.dragging : ''}>
 
-            <Paper sx={{height: 'calc(100vh - 13rem)', overflow:'auto', backgroundColor:'transparent', padding: 2}}>
+            <Paper sx={{height: 'calc(100vh - 13rem)', 
+                overflow:'auto', 
+                backgroundColor:'transparent', 
+                padding: 2}}
+            >
 
                 <List sx={{ opacity: isDragging ? 0.25 : 1, transition: 'all 0.3s ' }}>
                     { entriesByStatus.map( entry => (

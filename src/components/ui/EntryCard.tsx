@@ -45,7 +45,9 @@ export const EntryCard:React.FC<Props> = ({entry}) => {
                 </CardContent>
 
                 <CardActions sx={{display:'flex', justifyContent:'end', paddingRight: 2}}>
-                    <Typography variant='body2'>{ dateFunctions.getFormarDistanceToNow(entry.createdAt) }</Typography>
+                    <Typography variant='body2'>
+                        { dateFunctions.getFormarDistanceToNow(entry.createdAt) }
+                    </Typography>
                 </CardActions>
             </CardActionArea>
         </Card>
